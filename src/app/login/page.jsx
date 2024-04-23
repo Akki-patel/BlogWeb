@@ -1,3 +1,4 @@
+"use client"
 import { useRouter } from "next/router";
 import styles from "./loginPage.module.css"
 import { signIn, useSession } from 'next-auth/react'
