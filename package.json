@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "prebuild": "node prebuild.js",
-    "build": "npm install && prisma db pull --force && prisma generate",
+    "build": "prisma generate && cp -R node_modules/.prisma/client ./build && next build",
     "copy-prisma": "cp node_modules/@prisma/engines/libquery_engine-rhel-openssl-1.0.x.so.node node_modules/.prisma/client",
     "start": "next start",
     "lint": "next lint"
